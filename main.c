@@ -36,11 +36,45 @@
             c_textbackground(0);
             c_textcolor(4);
             number = rand() % 10;
-            x_number = (rand() % 111) + 5;
-            y_number = (rand() % 22) + 3;
+            // x_number = (rand() % 111) + 5;
+            // y_number = (rand() % 22) + 3;
+            x_number = 44;
+            y_number = 17;  
 
-            c_gotoxy(x_number, y_number);
-            printf("%d", number);
+            if(number == 1) {
+                c_gotoxy(x_number, y_number);
+                printf("%d", number);
+                c_gotoxy(x_number, y_number + 1);
+                printf("%d", number);
+                for(int i = 0; i <= 30; i++){
+                    ++x_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    c_gotoxy(x_number, y_number + 1);
+                    printf("%d", number);
+                }
+                x_number = 60;
+                for(int i = 0; i <= 10; i++){
+                    --y_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    c_gotoxy(x_number - 1, y_number);
+                    printf("%d", number);
+                }
+                for(int i = 0; i <= 5; i++){
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    ++y_number;
+                    --x_number;
+                    c_gotoxy(x_number, y_number - 1);
+                    printf("%d", number);
+
+                }
+
+                break;
+
+            }
+            // return;
 
         }
 

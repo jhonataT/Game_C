@@ -35,46 +35,153 @@
             delay(1);
             c_textbackground(0);
             c_textcolor(4);
-            number = rand() % 10;
+            // number = rand() % 10;
+            number = 3;
             // x_number = (rand() % 111) + 5;
             // y_number = (rand() % 22) + 3;
-            x_number = 44;
-            y_number = 17;  
-
+            x_number = 57;
+            y_number = 8;  
+                
             if(number == 1) {
+                c_textbackground(5);
+                c_textcolor(5);
+                for(int i = 0; i < 10; i++){
+                    ++y_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                }
+                x_number = 57;
+                y_number = 8;  
+                for(int i = 0; i < 4; i++){
+                    c_gotoxy(--x_number, ++y_number);
+                    printf("%d", number);
+                }
+            }
+            else if(number == 2){
+                c_textbackground(2);
+                c_textcolor(2);
+                x_number -= 10;
+                for(int i = 0; i <= 4; i++){
+                    ++x_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                }
+                for(int i = 0; i <= 8; i++){
+                    ++x_number;
+                    c_gotoxy(x_number, 7);
+                    printf("%d", number);
+                }
+                for(int i = 0; i <= 4; i++){
+                    ++x_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    if(i == 4){
+                        c_gotoxy(++x_number, ++y_number);
+                        printf("%d", number);
+                        c_gotoxy(++x_number, y_number);
+                        printf("%d", number);
+                    }
+                }
+                x_number -= 1;
+                for(int i = 0; i < 6; i++){
+                    x_number -= 3;
+                    ++y_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    c_gotoxy(x_number + 1, y_number);
+                    printf("%d", number);
+                }
+                x_number -= 2;
+                ++y_number; 
+               for(int i = 0; i <= 20; i++){
+                   ++x_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+               }
+                
+                
+
+            }
+            else if(number == 3){
+                c_textbackground(2);
+                c_textcolor(2);
+                x_number = 50   ;
+                y_number = 8;
+                for(int i = 0; i <= 9; i++){
+                    ++x_number;
+                    c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    if(i == 9){
+                        c_gotoxy(++x_number, ++y_number);
+                        printf("%d", number);
+                        for(int i = 0; i < 3; i++){}
+                        
+                    }
+                }
+                --y_number;
+                for(int i = 0; i < 3; i++){
+                    c_gotoxy(x_number, ++y_number);
+                    printf("%d", number);
+                    c_gotoxy(62, y_number);
+                    printf("%d", number);
+                }
+                ++y_number;
+                for(int i = 0; i <= 9; i++){
+                    c_gotoxy(--x_number, y_number);
+                    printf("%d", number);
+                }
+                x_number = 61;
+                for(int i = 0; i < 3; i++){
+                    c_gotoxy(x_number, ++y_number);
+                    printf("%d", number);
+                    c_gotoxy(62, y_number);
+                    printf("%d", number);
+                    
+                }
+                ++y_number;
+                for(int i = 0; i <= 9; i++){
+                    c_gotoxy(--x_number, y_number);
+                    printf("%d", number);
+                }
+                
+            }
+            else if(number == 4){
+
+                // Loading
+
+
+
+
+            }
+            else if(number == 7) {
+                x_number = 44;
+                y_number = 8;
+                c_textbackground(4);
+                c_textcolor(4);
                 c_gotoxy(x_number, y_number);
                 printf("%d", number);
                 c_gotoxy(x_number, y_number + 1);
                 printf("%d", number);
-                for(int i = 0; i <= 30; i++){
+                c_gotoxy(x_number + 1, y_number + 1);
+                printf("%d", number);
+                for(int i = 0; i < 25; i++){
                     ++x_number;
                     c_gotoxy(x_number, y_number);
                     printf("%d", number);
-                    c_gotoxy(x_number, y_number + 1);
-                    printf("%d", number);
                 }
-                x_number = 60;
-                for(int i = 0; i <= 10; i++){
-                    --y_number;
+                for(int i = 0; i < 9; i++){
+                    x_number -= 2;
+                    ++y_number;
                     c_gotoxy(x_number, y_number);
+                    printf("%d", number);
+                    c_gotoxy(x_number + 1, y_number);
                     printf("%d", number);
                     c_gotoxy(x_number - 1, y_number);
                     printf("%d", number);
-                }
-                for(int i = 0; i <= 5; i++){
-                    c_gotoxy(x_number, y_number);
+                    c_gotoxy(x_number + 2, y_number);
                     printf("%d", number);
-                    ++y_number;
-                    --x_number;
-                    c_gotoxy(x_number, y_number - 1);
-                    printf("%d", number);
-
                 }
-
-                break;
-
             }
-            // return;
 
         }
 

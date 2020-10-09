@@ -38,7 +38,6 @@
                 c_gotoxy(--x_number, ++y_number);
                 printf("%d", number);
             }
-            // clean:
         }
         else if(number == 2){
             c_textbackground(color);
@@ -354,7 +353,18 @@
                 printf("%d", number);
             }
         }
-        c_gotoxy(0, 0);
+        c_gotoxy(2, 2);
+
+        //clean:
+        delay(50);
+        for(int i = 2; i <= 118; i++){
+            for(int j = 2; j < 26; j++){
+                c_textbackground(0);
+                c_gotoxy(i, j);    
+                printf(" ");
+            }
+        }
+
         return;
         // while(1);
     }
@@ -371,7 +381,7 @@
             c_textbackground(0);
             c_textcolor(4);
             number = rand() % 10;
-            // number = 0;
+            // number = 1;
                 
             if(number == 1){
                 x_number = (rand() % 110) + 6;
